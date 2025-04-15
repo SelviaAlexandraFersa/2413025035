@@ -1,142 +1,249 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Portal Tugas - Selvia Alexandra Fersa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Tugas Selvia</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 20px;
-      background: linear-gradient(135deg, #ffe4ec, #e0f7fa);
-      color: #444;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f3e5f5);
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-
-    h1 {
-      color: #d66ba0;
-      font-size: 32px;
+    header {
+      background-color: #7b9e92;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
     }
-
-    form {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #fff5fb;
-      border-radius: 15px;
-      border: 2px dashed #f9c3e1;
-      box-shadow: 0 4px 10px rgba(248, 199, 228, 0.4);
+    header h1 {
+      font-size: 3em;
+      margin: 0;
     }
-
-    input, button {
-      padding: 12px;
-      margin: 10px 0;
-      display: block;
-      width: 100%;
-      max-width: 400px;
-      border: 1px solid #f3bdd6;
-      border-radius: 10px;
-      font-size: 14px;
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
-    input:focus {
-      outline: none;
-      border-color: #d66ba0;
-      box-shadow: 0 0 5px #f9c3e1;
-    }
-
-    button {
-      background-color: #f9c3e1;
-      color: #6c2f57;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #f4a7cc;
-    }
-
-    .task {
+    section {
       margin-bottom: 30px;
-      padding: 15px;
-      background-color: #fff8fa;
-      border: 2px solid #f9d8ea;
+    }
+    h2, h3 {
+      color: #4a6e6a;
+    }
+    input[type="text"] {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+    input[type="text"]:hover {
+      border-color: #7b9e92;
+    }
+    button {
+      margin-top: 8px;
+      background-color: #7b9e92;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background-color: #6d8c7f;
+    }
+    iframe, .video-link, .pdf-link {
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    iframe {
+      height: 400px;
+    }
+    .task-card {
+      padding: 20px;
+      background: #f4f7f6;
+      border: 2px solid #7b9e92;
       border-radius: 15px;
-      box-shadow: 0 3px 8px rgba(249, 195, 225, 0.2);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+    .task-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
-    iframe {
-      width: 100%;
-      height: 400px;
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #7b9e92;
+      color: white;
       border: none;
-      margin-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      transition: 0.3s ease;
+    }
+    .scroll-to-top:hover {
+      background-color: #6d8c7f;
+    }
+
+    footer {
+      background-color: #7b9e92;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Selamat Datang di Website Hosting Pengumpulan Tugas Mata Kuliah Grafika Komputer</h1>
+  </header>
 
-  <h1>🎀 Portal Tugas Selvia Alexandra Fersa 🎀</h1>
+  <main>
+    <section>
+      <h2>Tentang Saya</h2>
+      <p>Halo! Nama saya Selvia Alexandra Fersa. Saya adalah mahasiswi dari Program Studi S1 Pendidikan Teknologi Informasi di Universitas Lampung, angkatan 2024. Saya memiliki minat yang besar terhadap teknologi, terutama dalam bidang pemrograman dan desain grafis. Website ini saya buat sebagai wadah untuk mengumpulkan dan membagikan tugas-tugas kuliah saya, khususnya dari mata kuliah Grafika Komputer. Saya harap dengan adanya web ini, saya bisa lebih kreatif dan terorganisir dalam menyimpan hasil belajar saya.</p>
+    </section>
 
-  <form id="uploadForm">
-    <label>📌 Nama Tugas:</label>
-    <input type="text" id="namaTugas" required>
+    <section>
+      <h2>Daftar Tugas Grafika Komputer 📝</h2>
 
-    <label>📘 Mata Kuliah:</label>
-    <input type="text" id="namaMatkul" required>
+      <!-- Ulangi task-card 4x -->
+      <div class="task-card">
+        <h3>📁 Tugas 1 – Tokoh Perintis Grafika Komputer</h3>
+        <label>Link PDF (Google Drive):</label>
+        <input type="text" id="pdfLink1" placeholder="Tempelkan link share Google Drive di sini" />
+        <button onclick="showPDF('pdfLink1', 'pdfView1')">Tampilkan PDF</button>
+        <div class="pdf-link" id="pdfView1"></div>
+        <br />
+        <label>Link Video YouTube:</label>
+        <input type="text" id="videoLink1" placeholder="Tempelkan link YouTube di sini" />
+        <button onclick="showVideoLink('videoLink1', 'videoView1')">Tampilkan Video</button>
+        <div class="video-link" id="videoView1"></div>
+      </div>
 
-    <label>📎 Upload File PDF (maks. 4 file):</label>
-    <input type="file" id="pdfFile" accept="application/pdf" multiple required>
+      <div class="task-card">
+        <h3>📁 Tugas 2 – Algoritma Pembentukan Garis</h3>
+        <label>Link PDF (Google Drive):</label>
+        <input type="text" id="pdfLink2" placeholder="Tempelkan link share Google Drive di sini" />
+        <button onclick="showPDF('pdfLink2', 'pdfView2')">Tampilkan PDF</button>
+        <div class="pdf-link" id="pdfView2"></div>
+        <br />
+        <label>Link Video YouTube:</label>
+        <input type="text" id="videoLink2" placeholder="Tempelkan link YouTube di sini" />
+        <button onclick="showVideoLink('videoLink2', 'videoView2')">Tampilkan Video</button>
+        <div class="video-link" id="videoView2"></div>
+      </div>
 
-    <button type="submit">✨ Upload Tugas ✨</button>
-  </form>
+      <div class="task-card">
+        <h3>📁 Tugas 3 – Algoritma Pembentukan Lingkaran</h3>
+        <label>Link PDF (Google Drive):</label>
+        <input type="text" id="pdfLink3" placeholder="Tempelkan link share Google Drive di sini" />
+        <button onclick="showPDF('pdfLink3', 'pdfView3')">Tampilkan PDF</button>
+        <div class="pdf-link" id="pdfView3"></div>
+        <br />
+        <label>Link Video YouTube:</label>
+        <input type="text" id="videoLink3" placeholder="Tempelkan link YouTube di sini" />
+        <button onclick="showVideoLink('videoLink3', 'videoView3')">Tampilkan Video</button>
+        <div class="video-link" id="videoView3"></div>
+      </div>
 
-  <h2>🗂️ Daftar Tugas:</h2>
-  <div id="daftarTugas"></div>
+      <div class="task-card">
+        <h3>📁 Tugas 4 – Algoritma Pembentukan Kurva
+        </h3>
+        <label>Link PDF (Google Drive):</label>
+        <input type="text" id="pdfLink4" placeholder="Tempelkan link share Google Drive di sini" />
+        <button onclick="showPDF('pdfLink4', 'pdfView4')">Tampilkan PDF</button>
+        <div class="pdf-link" id="pdfView4"></div>
+        <br />
+        <label>Link Video YouTube:</label>
+        <input type="text" id="videoLink4" placeholder="Tempelkan link YouTube di sini" />
+        <button onclick="showVideoLink('videoLink4', 'videoView4')">Tampilkan Video</button>
+        <div class="video-link" id="videoView4"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <button class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <footer>
+    <p>&copy; 2025 Selvia Alexandra Fersa. Semua hak dilindungi.</p>
+  </footer>
 
   <script>
-    const form = document.getElementById('uploadForm');
-    const daftarTugas = document.getElementById('daftarTugas');
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const namaTugas = document.getElementById('namaTugas').value;
-      const namaMatkul = document.getElementById('namaMatkul').value;
-      const files = document.getElementById('pdfFile').files;
-
-      if (files.length === 0) {
-        alert('Pilih minimal satu file PDF!');
-        return;
+    window.onscroll = function() {
+      const button = document.querySelector('.scroll-to-top');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
       }
+    };
 
-      if (files.length > 4) {
-        alert('Maksimal upload 4 file yaa 🌸');
-        return;
-      }
-
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-
-        if (file.type !== 'application/pdf') {
-          alert(`File ${file.name} bukan PDF!`);
-          continue;
+    function showPDF(inputId, viewId) {
+      const link = document.getElementById(inputId).value;
+      const viewDiv = document.getElementById(viewId);
+      if (link.includes("drive.google.com")) {
+        const fileId = link.match(/[-\w]{25,}/);
+        if (fileId) {
+          const embedLink = `https://drive.google.com/file/d/${fileId[0]}/preview`;
+          viewDiv.innerHTML = `<iframe src="${embedLink}" allow="autoplay"></iframe>`;
+        } else {
+          viewDiv.innerHTML = `<p>Link tidak valid. Coba salin ulang dari Google Drive.</p>`;
         }
-
-        const fileURL = URL.createObjectURL(file);
-
-        const tugasDiv = document.createElement('div');
-        tugasDiv.className = 'task';
-        tugasDiv.innerHTML = `
-          <p><strong>🎯 Tugas:</strong> ${namaTugas} - File ${i + 1}</p>
-          <p><strong>📚 Matkul:</strong> ${namaMatkul}</p>
-          <iframe src="${fileURL}"></iframe>
-        `;
-
-        daftarTugas.appendChild(tugasDiv);
+      } else {
+        viewDiv.innerHTML = `<p>Link harus berasal dari Google Drive.</p>`;
       }
+    }
 
-      form.reset();
-    });
+    function showVideoLink(inputId, viewId) {
+      const link = document.getElementById(inputId).value;
+      const viewDiv = document.getElementById(viewId);
+      if (link.includes("youtube.com") || link.includes("youtu.be")) {
+        const embed = convertToEmbed(link);
+        viewDiv.innerHTML = `<iframe width="100%" height="300" src="${embed}" frameborder="0" allowfullscreen></iframe>`;
+      } else {
+        viewDiv.innerHTML = `<p>Link tidak valid. Masukkan link dari YouTube.</p>`;
+      }
+    }
+
+    function convertToEmbed(link) {
+      if (link.includes("watch?v=")) {
+        return link.replace("watch?v=", "embed/");
+      } else if (link.includes("youtu.be")) {
+        return link.replace("youtu.be/", "youtube.com/embed/");
+      }
+      return link;
+    }
   </script>
 </body>
 </html>
