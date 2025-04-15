@@ -6,7 +6,6 @@
   <title>Website Tugas Selvia</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -15,6 +14,7 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #7b9e92;
       color: white;
@@ -22,12 +22,13 @@
       text-align: center;
       border-radius: 0 0 20px 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      position: relative;
     }
+
     header h1 {
       font-size: 3em;
       margin: 0;
     }
+
     main {
       max-width: 900px;
       margin: 30px auto;
@@ -36,45 +37,26 @@
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     section {
       margin-bottom: 30px;
     }
+
     h2, h3 {
       color: #4a6e6a;
     }
-    input[type="text"] {
-      margin-top: 10px;
+
+    iframe {
       width: 100%;
-      padding: 10px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-    }
-    input[type="text"]:hover {
-      border-color: #7b9e92;
-    }
-    button {
-      margin-top: 8px;
-      background-color: #7b9e92;
-      color: white;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    button:hover {
-      background-color: #6d8c7f;
-    }
-    iframe, .video-link, .pdf-link {
-      width: 100%;
       margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
     }
+
     iframe {
       height: 400px;
     }
+
     .task-card {
       padding: 20px;
       background: #f4f7f6;
@@ -83,26 +65,10 @@
       margin-bottom: 25px;
       transition: transform 0.3s ease;
     }
+
     .task-card:hover {
       transform: scale(1.02);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .scroll-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #7b9e92;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      transition: 0.3s ease;
-    }
-    .scroll-to-top:hover {
-      background-color: #6d8c7f;
     }
 
     footer {
@@ -130,120 +96,50 @@
     <section>
       <h2>Daftar Tugas Grafika Komputer 📝</h2>
 
-      <!-- Ulangi task-card 4x -->
+      <!-- TUGAS 1 -->
       <div class="task-card">
         <h3>📁 Tugas 1 – Tokoh Perintis Grafika Komputer</h3>
         <label>Link PDF (Google Drive):</label>
-        <input type="text" id="pdfLink1" placeholder="Tempelkan link share Google Drive di sini" />
+        <input type="text" id="pdfLink1" placeholder="Tempelkan link share Google Drive di sini" value="https://drive.google.com/file/d/1yYZXkNGZrPBEccCCOBJ1j0HssUT_KXq1/view?usp=sharing" />
         <button onclick="showPDF('pdfLink1', 'pdfView1')">Tampilkan PDF</button>
-        <div class="pdf-link" id="pdfView1"></div>
+        <div class="pdf-link" id="pdfView1">
+          <iframe src="https://drive.google.com/file/d/1yYZXkNGZrPBEccCCOBJ1j0HssUT_KXq1/preview" allow="autoplay"></iframe>
+        </div>
         <br />
         <label>Link Video YouTube:</label>
-        <input type="text" id="videoLink1" placeholder="Tempelkan link YouTube di sini" />
+        <input type="text" id="videoLink1" placeholder="Tempelkan link YouTube di sini" value="https://www.youtube.com/watch?v=drfKioQSng4" />
         <button onclick="showVideoLink('videoLink1', 'videoView1')">Tampilkan Video</button>
-        <div class="video-link" id="videoView1"></div>
+        <div class="video-link" id="videoView1">
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/drfKioQSng4" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
-
+      
+      <!-- TUGAS 2 -->
       <div class="task-card">
         <h3>📁 Tugas 2 – Algoritma Pembentukan Garis</h3>
-        <label>Link PDF (Google Drive):</label>
-        <input type="text" id="pdfLink2" placeholder="Tempelkan link share Google Drive di sini" />
-        <button onclick="showPDF('pdfLink2', 'pdfView2')">Tampilkan PDF</button>
-        <div class="pdf-link" id="pdfView2"></div>
-        <br />
-        <label>Link Video YouTube:</label>
-        <input type="text" id="videoLink2" placeholder="Tempelkan link YouTube di sini" />
-        <button onclick="showVideoLink('videoLink2', 'videoView2')">Tampilkan Video</button>
-        <div class="video-link" id="videoView2"></div>
+        <iframe src="https://drive.google.com/file/d/ID_FILE_DRIVE_TUGAS2/preview" allow="autoplay"></iframe>
+        <iframe height="300" src="https://www.youtube.com/embed/ID_VIDEO_YOUTUBE_TUGAS2" frameborder="0" allowfullscreen></iframe>
       </div>
 
+      <!-- TUGAS 3 -->
       <div class="task-card">
         <h3>📁 Tugas 3 – Algoritma Pembentukan Lingkaran</h3>
-        <label>Link PDF (Google Drive):</label>
-        <input type="text" id="pdfLink3" placeholder="Tempelkan link share Google Drive di sini" />
-        <button onclick="showPDF('pdfLink3', 'pdfView3')">Tampilkan PDF</button>
-        <div class="pdf-link" id="pdfView3"></div>
-        <br />
-        <label>Link Video YouTube:</label>
-        <input type="text" id="videoLink3" placeholder="Tempelkan link YouTube di sini" />
-        <button onclick="showVideoLink('videoLink3', 'videoView3')">Tampilkan Video</button>
-        <div class="video-link" id="videoView3"></div>
+        <iframe src="https://drive.google.com/file/d/ID_FILE_DRIVE_TUGAS3/preview" allow="autoplay"></iframe>
+        <iframe height="300" src="https://www.youtube.com/embed/ID_VIDEO_YOUTUBE_TUGAS3" frameborder="0" allowfullscreen></iframe>
       </div>
 
+      <!-- TUGAS 4 -->
       <div class="task-card">
-        <h3>📁 Tugas 4 – Algoritma Pembentukan Kurva
-        </h3>
-        <label>Link PDF (Google Drive):</label>
-        <input type="text" id="pdfLink4" placeholder="Tempelkan link share Google Drive di sini" />
-        <button onclick="showPDF('pdfLink4', 'pdfView4')">Tampilkan PDF</button>
-        <div class="pdf-link" id="pdfView4"></div>
-        <br />
-        <label>Link Video YouTube:</label>
-        <input type="text" id="videoLink4" placeholder="Tempelkan link YouTube di sini" />
-        <button onclick="showVideoLink('videoLink4', 'videoView4')">Tampilkan Video</button>
-        <div class="video-link" id="videoView4"></div>
+        <h3>📁 Tugas 4 – Algoritma Pembentukan Kurva</h3>
+        <iframe src="https://drive.google.com/file/d/ID_FILE_DRIVE_TUGAS4/preview" allow="autoplay"></iframe>
+        <iframe height="300" src="https://www.youtube.com/embed/ID_VIDEO_YOUTUBE_TUGAS4" frameborder="0" allowfullscreen></iframe>
       </div>
 
     </section>
   </main>
 
-  <button class="scroll-to-top" onclick="scrollToTop()">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
   <footer>
     <p>&copy; 2025 Selvia Alexandra Fersa. Semua hak dilindungi.</p>
   </footer>
-
-  <script>
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    window.onscroll = function() {
-      const button = document.querySelector('.scroll-to-top');
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        button.style.display = 'block';
-      } else {
-        button.style.display = 'none';
-      }
-    };
-
-    function showPDF(inputId, viewId) {
-      const link = document.getElementById(inputId).value;
-      const viewDiv = document.getElementById(viewId);
-      if (link.includes("drive.google.com")) {
-        const fileId = link.match(/[-\w]{25,}/);
-        if (fileId) {
-          const embedLink = `https://drive.google.com/file/d/${fileId[0]}/preview`;
-          viewDiv.innerHTML = `<iframe src="${embedLink}" allow="autoplay"></iframe>`;
-        } else {
-          viewDiv.innerHTML = `<p>Link tidak valid. Coba salin ulang dari Google Drive.</p>`;
-        }
-      } else {
-        viewDiv.innerHTML = `<p>Link harus berasal dari Google Drive.</p>`;
-      }
-    }
-
-    function showVideoLink(inputId, viewId) {
-      const link = document.getElementById(inputId).value;
-      const viewDiv = document.getElementById(viewId);
-      if (link.includes("youtube.com") || link.includes("youtu.be")) {
-        const embed = convertToEmbed(link);
-        viewDiv.innerHTML = `<iframe width="100%" height="300" src="${embed}" frameborder="0" allowfullscreen></iframe>`;
-      } else {
-        viewDiv.innerHTML = `<p>Link tidak valid. Masukkan link dari YouTube.</p>`;
-      }
-    }
-
-    function convertToEmbed(link) {
-      if (link.includes("watch?v=")) {
-        return link.replace("watch?v=", "embed/");
-      } else if (link.includes("youtu.be")) {
-        return link.replace("youtu.be/", "youtube.com/embed/");
-      }
-      return link;
-    }
-  </script>
 </body>
 </html>
